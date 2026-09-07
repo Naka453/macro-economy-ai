@@ -7,7 +7,10 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 def ask(question: str):
 
     response = client.responses.create(
-        model="gpt-5.5",
+        model="gpt-6-astra",
+        reasoning={
+            "effort": "high"
+        },
         input=question,
         tools=[
             {

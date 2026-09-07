@@ -15,7 +15,11 @@ def ask(question: str):
 
     response = client.responses.create(
 
-        model="gpt-5.5",
+        model="gpt-6-astra",
+
+        reasoning={
+            "effort": "high"
+        },
 
         instructions=PROMPT,
 
